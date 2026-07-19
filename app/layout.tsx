@@ -63,7 +63,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#F2F1EA',
+  themeColor: '#0F0F0F',
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
@@ -75,9 +75,9 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR" className={`${jetbrainsMono.variable} ${GeistPixelGrid.variable}`} suppressHydrationWarning>
+    <html lang="pt-BR" className={`${jetbrainsMono.variable} ${GeistPixelGrid.variable} bg-background`} suppressHydrationWarning>
       <body className="font-mono antialiased">
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
           {children}
         </ThemeProvider>
       </body>
