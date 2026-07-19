@@ -17,7 +17,7 @@ export function HeroSection() {
           transition={{ duration: 0.7, ease }}
           className="font-pixel text-4xl sm:text-6xl lg:text-7xl xl:text-8xl tracking-tight text-foreground mb-2 select-none"
         >
-          DEPLOY. SCALE.
+          SERVIDOR DOS
         </motion.h1>
 
         {/* Central Workflow Diagram */}
@@ -38,7 +38,7 @@ export function HeroSection() {
           className="font-pixel text-4xl sm:text-6xl lg:text-7xl xl:text-8xl tracking-tight text-foreground mb-4 select-none"
           aria-hidden="true"
         >
-          ROUTE.
+          PROGRAMADORES
         </motion.h1>
 
         {/* Sub-headline */}
@@ -48,7 +48,7 @@ export function HeroSection() {
           transition={{ duration: 0.5, delay: 0.45, ease }}
           className="text-xs lg:text-sm text-muted-foreground max-w-md mb-6 leading-relaxed font-mono"
         >
-          SYS.INT is the deterministic deployment layer between your models and your users. Sub-5ms inference. Global edge routing. Full operational control.
+          Comunidade de tecnologia para todos os públicos. Networking, dicas, eventos e muito mais de TI. Junte-se a +20 mil devs no Discord.
         </motion.p>
 
         {/* CTA Button */}
@@ -70,7 +70,7 @@ export function HeroSection() {
             </motion.span>
           </span>
           <span className="px-5 py-2.5">
-            Request a Demo
+            Entrar na comunidade
           </span>
         </motion.button>
       </div>

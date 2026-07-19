@@ -11,32 +11,28 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Brutalist AI SaaS Landing Page Template | Engineering-Grade Dark UI Kit',
+  title: 'Servidor dos Programadores | Comunidade Discord de Tecnologia',
   description:
-    'A brutalist, engineering-themed landing page template for AI infrastructure and SaaS products. Features Geist Pixel typography, dot-grid backgrounds, live terminal animations, scramble-text micro-interactions, bento feature grids, isometric 3D illustrations, and a fully responsive dark industrial design system. Built with Next.js 16, Tailwind CSS, and Framer Motion.',
+    'Comunidade de tecnologia para todos os públicos. Networking, dicas, eventos e muito mais de TI. Junte-se a mais de 20 mil devs no Discord do Servidor dos Programadores. Eventos sobre Figma, UI/UX, AI Agents, vagas, freelances e networking.',
   keywords: [
-    'brutalist landing page template',
-    'AI SaaS template',
-    'engineering UI kit',
-    'Next.js landing page',
-    'Tailwind CSS template',
-    'dark UI template',
-    'Geist Pixel font',
-    'bento grid layout',
-    'SaaS pricing page',
-    'Framer Motion animations',
-    'monospace design system',
-    'developer landing page',
-    'AI infrastructure template',
-    'industrial web design',
-    'dot matrix typography',
-    'terminal UI components',
-    'startup landing page',
-    'tech landing page template',
+    'servidor dos programadores',
+    'comunidade discord',
+    'comunidade de programação',
+    'comunidade de tecnologia',
+    'networking dev',
+    'eventos de programação',
+    'vagas de programação',
+    'freelance dev',
+    'discord de programadores',
+    'comunidade dev brasil',
+    'aprender programação',
+    'ui ux figma',
+    'ai agents',
+    'carreira dev',
   ],
-  authors: [{ name: 'SYS.INT' }],
-  creator: 'System Intelligence Corp.',
-  publisher: 'System Intelligence Corp.',
+  authors: [{ name: 'Servidor dos Programadores' }],
+  creator: 'Servidor dos Programadores',
+  publisher: 'Servidor dos Programadores',
   robots: {
     index: true,
     follow: true,
@@ -50,18 +46,18 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    locale: 'en_US',
-    title: 'Brutalist AI SaaS Landing Page Template | Engineering-Grade Dark UI Kit',
+    locale: 'pt_BR',
+    title: 'Servidor dos Programadores | Comunidade Discord de Tecnologia',
     description:
-      'A brutalist, engineering-themed landing page template for AI and SaaS products. Geist Pixel typography, terminal animations, bento grids, scramble-text effects, and a full industrial design system. Next.js 16 + Tailwind CSS + Framer Motion.',
-    siteName: 'SYS.INT Template',
+      'Comunidade de tecnologia para todos os públicos. Networking, dicas, eventos e muito mais de TI. Junte-se a mais de 20 mil devs no Discord.',
+    siteName: 'Servidor dos Programadores',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Brutalist AI SaaS Landing Page Template',
+    title: 'Servidor dos Programadores',
     description:
-      'Engineering-grade brutalist template for AI SaaS products. Dot-grid backgrounds, live terminal animations, Geist Pixel typography, bento feature grids, and scramble-text micro-interactions. Built with Next.js 16.',
-    creator: '@sysint',
+      'Comunidade de tecnologia para todos os públicos. Networking, dicas, eventos, vagas e freelances. Junte-se a +20 mil devs no Discord.',
+    creator: '@servidordosprogramadores',
   },
   category: 'technology',
 }
@@ -79,7 +75,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${jetbrainsMono.variable} ${GeistPixelGrid.variable}`} suppressHydrationWarning>
+    <html lang="pt-BR" className={`${jetbrainsMono.variable} ${GeistPixelGrid.variable}`} suppressHydrationWarning>
       <body className="font-mono antialiased">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
           {children}

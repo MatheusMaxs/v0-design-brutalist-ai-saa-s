@@ -76,10 +76,10 @@ function UptimeCounter() {
 
 /* ── stat block ── */
 const STATS = [
-  { label: "MODELS_DEPLOYED", value: "147" },
-  { label: "EDGE_REGIONS", value: "50+" },
-  { label: "INFERENCE_CALLS", value: "12.8B" },
-  { label: "AVG_LATENCY", value: "4.2ms" },
+  { label: "MEMBROS_ATIVOS", value: "20.842" },
+  { label: "EVENTOS_POR_MES", value: "12+" },
+  { label: "CANAIS_DE_VAGAS", value: "8" },
+  { label: "PARCEIROS", value: "3" },
 ]
 
 function StatBlock({ label, value, index }: { label: string; value: string; index: number }) {
@@ -114,7 +114,7 @@ export function AboutSection() {
         className="flex items-center gap-4 mb-8"
       >
         <span className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground font-mono">
-          {"// SECTION: ABOUT_SYS.INT"}
+          {"// SEÇÃO: SOBRE_A_COMUNIDADE"}
         </span>
         <div className="flex-1 border-t border-border" />
         <BlinkDot />
@@ -174,7 +174,7 @@ export function AboutSection() {
           {/* Header bar */}
           <div className="flex items-center justify-between px-5 py-3 border-b-2 border-foreground">
             <span className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground font-mono">
-              MANIFEST.md
+              SOBRE_NOS.md
             </span>
             <span className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground font-mono">
               v3.1.0
@@ -191,9 +191,9 @@ export function AboutSection() {
                 transition={{ duration: 0.5, delay: 0.2, ease }}
                 className="text-2xl lg:text-3xl font-mono font-bold tracking-tight uppercase text-balance"
               >
-                Infrastructure built for
+                Uma comunidade feita
                 <br />
-                <span className="text-[#ea580c]">raw intelligence</span>
+                <span className="text-[#ea580c]">por devs, para devs</span>
               </motion.h2>
 
               <motion.div
@@ -204,15 +204,15 @@ export function AboutSection() {
                 className="flex flex-col gap-4"
               >
                 <p className="text-xs lg:text-sm font-mono text-muted-foreground leading-relaxed">
-                  We engineer the substrate layer that sits between your models
-                  and your users. No abstractions. No magic. Just deterministic
-                  routing, sub-5ms inference, and transparent operational control
-                  across every edge node in the network.
+                  O Servidor dos Programadores é uma comunidade de tecnologia
+                  para todos os públicos. Networking a toda hora, dicas de
+                  carreira, eventos ao vivo, canal de vagas e freelances — tudo
+                  dentro do Discord, sem enrolação.
                 </p>
                 <p className="text-xs lg:text-sm font-mono text-muted-foreground leading-relaxed">
-                  Founded by systems engineers who spent a decade building
-                  distributed compute at hyperscale. We believe AI infrastructure
-                  should be inspectable, auditable, and brutally fast.
+                  Fundada por Bernardo Righi, Caio Andres e Matheus Audibert,
+                  engenheiros que acreditam que aprender programação deve ser
+                  colaborativo, acessível e brutalmente prático.
                 </p>
               </motion.div>
 
@@ -227,7 +227,7 @@ export function AboutSection() {
               >
                 <span className="h-1.5 w-1.5 bg-[#ea580c]" />
                 <span className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground font-mono">
-                  UPTIME:
+                  ONLINE HÁ:
                 </span>
                 <UptimeCounter />
               </motion.div>

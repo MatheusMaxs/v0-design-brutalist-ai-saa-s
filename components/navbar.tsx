@@ -1,6 +1,6 @@
 "use client"
 
-import { Cpu } from "lucide-react"
+import { Code2 } from "lucide-react"
 import { motion } from "framer-motion"
 import { ThemeToggle } from "@/components/theme-toggle"
 
@@ -21,15 +21,15 @@ export function Navbar() {
             transition={{ delay: 0.2, duration: 0.4 }}
             className="flex items-center gap-3"
           >
-            <Cpu size={16} strokeWidth={1.5} />
+            <Code2 size={16} strokeWidth={1.5} />
             <span className="text-xs font-mono tracking-[0.15em] uppercase font-bold">
-              SYS.INT
+              {"</> SDP"}
             </span>
           </motion.div>
 
           {/* Center nav links */}
           <div className="hidden md:flex items-center gap-8">
-            {["Platform", "Enterprise", "Resources", "Company"].map((link, i) => (
+            {["Home", "Sobre", "Eventos", "Founders", "Contatos"].map((link, i) => (
               <motion.a
                 key={link}
                 href="#"
@@ -55,14 +55,14 @@ export function Navbar() {
               href="#"
               className="hidden sm:block text-xs font-mono tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors duration-200"
             >
-              Log In
+              Discord
             </a>
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="bg-foreground text-background px-4 py-2 text-xs font-mono tracking-widest uppercase"
             >
-              Request Demo
+              Junte-se
             </motion.button>
           </motion.div>
         </div>

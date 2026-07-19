@@ -47,7 +47,7 @@ function StatusLine() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setThroughput((Math.random() * 50 + 10).toFixed(1))
+      setThroughput((Math.random() * 3 + 1.5).toFixed(1))
     }, 2000)
     return () => clearInterval(interval)
   }, [])
@@ -55,7 +55,7 @@ function StatusLine() {
   return (
     <div className="flex items-center gap-2 text-[10px] tracking-widest text-muted-foreground uppercase font-mono">
       <span className="h-1.5 w-1.5 bg-[#ea580c]" />
-      <span>live throughput: {throughput}k req/s</span>
+      <span>membros online agora: {throughput}k</span>
     </div>
   )
 }
@@ -80,57 +80,57 @@ interface Tier {
 
 const TIERS: Tier[] = [
   {
-    id: "open-source",
-    name: "OPEN_SOURCE",
-    price: "0",
-    period: "/ forever",
+    id: "networking",
+    name: "NETWORKING",
+    price: "01",
+    period: "/ grátis",
     tag: null,
-    description: "Community-grade inference. Rate-limited. No SLA.",
+    description: "Oportunidades de networking a toda hora, para projetos ou emprego.",
     features: [
-      { text: "10K requests / month", included: true },
-      { text: "Community models", included: true },
-      { text: "Shared compute pool", included: true },
-      { text: "Single region", included: true },
-      { text: "Priority routing", included: false },
-      { text: "Dedicated support", included: false },
+      { text: "Conexões com +20 mil devs", included: true },
+      { text: "Canais por área de atuação", included: true },
+      { text: "Roundtables e social events", included: true },
+      { text: "Parcerias para projetos", included: true },
+      { text: "Contato direto com founders", included: true },
+      { text: "Nenhuma mensalidade", included: true },
     ],
-    cta: "DEPLOY FREE",
+    cta: "COMEÇAR A CONECTAR",
     highlighted: false,
   },
   {
-    id: "pro",
-    name: "PRO_TIER",
-    price: "249",
-    period: "/ month",
-    tag: "RECOMMENDED",
-    description: "Production-grade. Sub-5ms latency. 99.97% uptime SLA.",
+    id: "aprendizado",
+    name: "CONHECIMENTO",
+    price: "02",
+    period: "/ grátis",
+    tag: "MAIS POPULAR",
+    description: "Eventos sobre Figma, UI/UX, AI Agents, LinkedIn, GitHub e muito mais.",
     features: [
-      { text: "Unlimited requests", included: true },
-      { text: "All 147 foundation models", included: true },
-      { text: "Dedicated compute", included: true },
-      { text: "12-region edge deployment", included: true },
-      { text: "Priority routing", included: true },
-      { text: "Dedicated support", included: false },
+      { text: "Eventos ao vivo toda semana", included: true },
+      { text: "Palestras sobre AI & Agents", included: true },
+      { text: "Workshops de UI/UX & Figma", included: true },
+      { text: "Metas para entrevistas em inglês", included: true },
+      { text: "Aprendizado constante com devs", included: true },
+      { text: "Gravações dos eventos", included: true },
     ],
-    cta: "START BUILDING",
+    cta: "VER AGENDA DE EVENTOS",
     highlighted: true,
   },
   {
-    id: "enterprise",
-    name: "ENTERPRISE",
-    price: "CUSTOM",
-    period: "",
+    id: "vagas",
+    name: "EMPREGOS_FREELAS",
+    price: "03",
+    period: "/ grátis",
     tag: null,
-    description: "Air-gapped. On-prem. Full operational control.",
+    description: "Canal de vagas e freelances direto no servidor. Ache a sua.",
     features: [
-      { text: "Unlimited everything", included: true },
-      { text: "Custom model fine-tuning", included: true },
-      { text: "Dedicated cluster", included: true },
-      { text: "50+ edge regions", included: true },
-      { text: "Custom SLA", included: true },
-      { text: "24/7 dedicated engineering", included: true },
+      { text: "Canal exclusivo de vagas", included: true },
+      { text: "Oportunidades de freelance", included: true },
+      { text: "Indicações da comunidade", included: true },
+      { text: "Dicas de LinkedIn & GitHub", included: true },
+      { text: "Preparação para entrevistas", included: true },
+      { text: "Suporte da comunidade", included: true },
     ],
-    cta: "CONTACT SALES",
+    cta: "ACHAR UMA VAGA",
     highlighted: false,
   },
 ]
@@ -179,7 +179,7 @@ function PricingCard({ tier, index }: { tier: Tier; index: number }) {
             <span className="text-3xl lg:text-4xl font-mono font-bold tracking-tight">CUSTOM</span>
           ) : (
             <span className="text-3xl lg:text-4xl">
-              <ScramblePrice target={tier.price} />
+              <ScramblePrice target={tier.price} prefix="#" />
             </span>
           )}
           {tier.period && (
@@ -282,7 +282,7 @@ export function PricingSection() {
         className="flex items-center gap-4 mb-8"
       >
         <span className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground font-mono">
-          {"// SECTION: PRICING_TIERS"}
+          {"// SEÇÃO: PORQUE_PARTICIPAR"}
         </span>
         <div className="flex-1 border-t border-border" />
         <BlinkDot />
@@ -301,10 +301,10 @@ export function PricingSection() {
       >
         <div className="flex flex-col gap-3">
           <h2 className="text-2xl lg:text-3xl font-mono font-bold tracking-tight uppercase text-foreground text-balance">
-            Select your compute tier
+            Porque participar?
           </h2>
           <p className="text-xs lg:text-sm font-mono text-muted-foreground leading-relaxed max-w-md">
-            All tiers include zero-config deploys, built-in monitoring, and access to the SYS.INT inference API.
+            Tire suas dúvidas você mesmo, evidenciando cada uma dessas experiências na prática. Tudo 100% gratuito, direto no Discord.
           </p>
         </div>
         <StatusLine />
@@ -326,7 +326,7 @@ export function PricingSection() {
         className="flex items-center gap-3 mt-6"
       >
         <span className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground font-mono">
-          {"* All plans billed annually. Cancel anytime. No vendor lock-in."}
+          {"* Comunidade 100% gratuita. Entre e saia quando quiser. Sem pegadinhas."}
         </span>
         <div className="flex-1 border-t border-border" />
       </motion.div>
